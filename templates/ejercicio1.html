@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 1</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='ejercicio1.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Formulario de Notas</h1>
+        <form method="POST">
+            <label>Nota 1: <input type="text" name="nota1"></label><br>
+            <label>Nota 2: <input type="text" name="nota2"></label><br>
+            <label>Nota 3: <input type="text" name="nota3"></label><br>
+            <label>Asistencia (%): <input type="text" name="asistencia"></label><br>
+            <button type="submit">Enviar</button>
+        </form>
+        {% if resultado %}
+            <p>Resultado: {{ resultado }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
